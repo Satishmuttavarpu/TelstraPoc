@@ -95,20 +95,17 @@
 		43EF410623ED608800F092A4 /* TelstraPoc */ = {
 			isa = PBXGroup;
 			children = (
-				43EF413D23ED60ED00F092A4 /* Service */,
+				43EF413F23ED615700F092A4 /* CustomView */,
+				43EF413623ED609E00F092A4 /* Model */,
 				43EF413C23ED60E200F092A4 /* View */,
+				43EF413723ED60A000F092A4 /* ViewModel */,
+				43EF413D23ED60ED00F092A4 /* Service */,
 				43EF413B23ED60D900F092A4 /* Helper */,
 				43EF413A23ED60C600F092A4 /* Asset */,
 				43EF413923ED60BF00F092A4 /* Api */,
 				43EF413823ED60A200F092A4 /* Utility */,
-				43EF413723ED60A000F092A4 /* ViewModel */,
-				43EF413623ED609E00F092A4 /* Model */,
 				43EF413523ED609900F092A4 /* Application */,
-				43EF410723ED608800F092A4 /* AppDelegate.swift */,
 				43EF410B23ED608800F092A4 /* Main.storyboard */,
-				43EF410E23ED608900F092A4 /* Assets.xcassets */,
-				43EF411023ED608900F092A4 /* LaunchScreen.storyboard */,
-				43EF411323ED608900F092A4 /* Info.plist */,
 			);
 			path = TelstraPoc;
 			sourceTree = "<group>";
@@ -134,6 +131,9 @@
 		43EF413523ED609900F092A4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				43EF410723ED608800F092A4 /* AppDelegate.swift */,
+				43EF411323ED608900F092A4 /* Info.plist */,
+				43EF411023ED608900F092A4 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -169,6 +169,7 @@
 		43EF413A23ED60C600F092A4 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				43EF410E23ED608900F092A4 /* Assets.xcassets */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -192,6 +193,13 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		43EF413F23ED615700F092A4 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
