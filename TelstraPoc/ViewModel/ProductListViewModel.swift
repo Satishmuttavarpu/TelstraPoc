@@ -17,6 +17,9 @@ protocol NotificationProtocal {
 
 class ProductListViewModel: NSObject {
     
+    let networkManager = NetworkManager()
+
+    
     var delegate : NotificationProtocal?
     var datalist = [Product]()
     var headerTittle:String?
@@ -24,9 +27,12 @@ class ProductListViewModel: NSObject {
     override init() {
     }
     
+    
     // Function to Fetch Data
     func fetchData() {
         
-        
+        networkManager.getNewFacts(page: 1) { [weak self] productList , error in
+            
+        }
     }
 }
