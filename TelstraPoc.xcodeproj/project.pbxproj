@@ -14,6 +14,11 @@
 		43EF411D23ED608900F092A4 /* TelstraPocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF411C23ED608900F092A4 /* TelstraPocTests.swift */; };
 		43EF412823ED608900F092A4 /* TelstraPocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF412723ED608900F092A4 /* TelstraPocUITests.swift */; };
 		43EF414123ED663000F092A4 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414023ED663000F092A4 /* ProductListViewController.swift */; };
+		43EF414723ED6A7400F092A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414623ED6A7400F092A4 /* Constant.swift */; };
+		43EF414923ED6ABB00F092A4 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */; };
+		43EF414B23ED6B0D00F092A4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414A23ED6B0D00F092A4 /* Product.swift */; };
+		43EF414D23ED6FC500F092A4 /* ProductCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */; };
+		43EF414F23ED70ED00F092A4 /* ReachabilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		43EF412723ED608900F092A4 /* TelstraPocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraPocUITests.swift; sourceTree = "<group>"; };
 		43EF412923ED608900F092A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EF414023ED663000F092A4 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		43EF414623ED6A7400F092A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		43EF414A23ED6B0D00F092A4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCustomCell.swift; sourceTree = "<group>"; };
+		43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +114,11 @@
 				43EF413D23ED60ED00F092A4 /* Service */,
 				43EF413B23ED60D900F092A4 /* Helper */,
 				43EF413A23ED60C600F092A4 /* Asset */,
-				43EF413923ED60BF00F092A4 /* Api */,
+				43EF413923ED60BF00F092A4 /* Networking */,
 				43EF413823ED60A200F092A4 /* Utility */,
 				43EF413523ED609900F092A4 /* Application */,
 				43EF410B23ED608800F092A4 /* Main.storyboard */,
+				43EF411323ED608900F092A4 /* Info.plist */,
 			);
 			path = TelstraPoc;
 			sourceTree = "<group>";
@@ -134,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				43EF410723ED608800F092A4 /* AppDelegate.swift */,
-				43EF411323ED608900F092A4 /* Info.plist */,
 				43EF411023ED608900F092A4 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -143,6 +153,7 @@
 		43EF413623ED609E00F092A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414A23ED6B0D00F092A4 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +161,7 @@
 		43EF413723ED60A000F092A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,15 +169,20 @@
 		43EF413823ED60A200F092A4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		43EF413923ED60BF00F092A4 /* Api */ = {
+		43EF413923ED60BF00F092A4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414523ED699100F092A4 /* Encoding */,
+				43EF414423ED698A00F092A4 /* Service */,
+				43EF414323ED698400F092A4 /* Manager */,
+				43EF414223ED697D00F092A4 /* EndPoint */,
 			);
-			path = Api;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		43EF413A23ED60C600F092A4 /* Asset */ = {
@@ -179,6 +196,7 @@
 		43EF413B23ED60D900F092A4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414623ED6A7400F092A4 /* Constant.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -201,8 +219,37 @@
 		43EF413F23ED615700F092A4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		43EF414223ED697D00F092A4 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		43EF414323ED698400F092A4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		43EF414423ED698A00F092A4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		43EF414523ED699100F092A4 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +385,11 @@
 			files = (
 				43EF414123ED663000F092A4 /* ProductListViewController.swift in Sources */,
 				43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */,
+				43EF414D23ED6FC500F092A4 /* ProductCustomCell.swift in Sources */,
+				43EF414B23ED6B0D00F092A4 /* Product.swift in Sources */,
+				43EF414923ED6ABB00F092A4 /* ProductListViewModel.swift in Sources */,
+				43EF414723ED6A7400F092A4 /* Constant.swift in Sources */,
+				43EF414F23ED70ED00F092A4 /* ReachabilityTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

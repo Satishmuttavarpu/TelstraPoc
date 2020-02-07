@@ -10,14 +10,66 @@ import UIKit
 
 class ProductListViewController: UITableViewController {
 
+    internal let refreshcontrol : UIRefreshControl = {
+        let rc = UIRefreshControl()
+        let title = NSLocalizedString(pullToRefresh, comment: pullToRefresh)
+        rc.attributedTitle = NSAttributedString(string: title)
+        rc.addTarget(self, action: #selector(refreshOptions(sender:)), for: UIControl.Event.valueChanged)
+        return rc
+    }()
+    
+    var productviewmodel = ProductListViewModel()
+    let cellId = "cellId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // Add Refresh Control to Table View
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshcontrol
+        } else {
+            tableView.addSubview(refreshcontrol)
+        }
+        
+        //
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        //
+        tableView.register(ProductCustomCell.self, forCellReuseIdentifier: cellId)
+        tableView.allowsSelection = false
+        
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //For
+        retrieveAPIData()
+    }
+    
+    @objc private func refreshOptions(sender: UIRefreshControl) {
+        // Perform actions to refresh the content
+        retrieveAPIData()
+    }
+    
+    //Funtion to retrieveAPIData
+    private func retrieveAPIData() {
+        if ReachabilityTest.isConnectedToNetwork() {
+            //productviewmodel.delegate = self
+            productviewmodel.fetchData();
+            
+            //Calling Viewmodel class to fetchdata
+        }
+        else{
+            let alert = UIAlertController(title: internetConnection, message: noInternetAvailable , preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: cancel , style: .cancel, handler: {[weak self] _ in
+                guard let weakSelf = self else { return }
+                weakSelf.refreshcontrol.endRefreshing()
+            }))
+            self.present(alert, animated: true, completion: nil)
+            self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        }
     }
 
     // MARK: - Table view data source
@@ -88,3 +140,4 @@ class ProductListViewController: UITableViewController {
     */
 
 }
+
