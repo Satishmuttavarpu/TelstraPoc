@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let appStartVC = ProductListViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = appStartVC
+        self.window?.rootViewController = UINavigationController(rootViewController: appStartVC)
         self.window?.makeKeyAndVisible()
         
         return true

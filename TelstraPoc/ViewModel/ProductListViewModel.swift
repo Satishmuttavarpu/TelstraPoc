@@ -18,7 +18,6 @@ protocol NotificationProtocal {
 class ProductListViewModel: NSObject {
     
     let networkManager = NetworkManager()
-
     
     var delegate : NotificationProtocal?
     var datalist = [Product]()
@@ -41,7 +40,6 @@ class ProductListViewModel: NSObject {
                 return
             }
             guard let list = productList else {
-                print("No data")
                 return
             }
             
