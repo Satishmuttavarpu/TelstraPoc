@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListViewController: UITableViewController {
+class ProductListViewController: UITableViewController,NotificationProtocal {
 
     internal let refreshcontrol : UIRefreshControl = {
         let rc = UIRefreshControl()
@@ -56,7 +56,7 @@ class ProductListViewController: UITableViewController {
     //Funtion to retrieveAPIData
     private func retrieveAPIData() {
         if ReachabilityTest.isConnectedToNetwork() {
-            //productviewmodel.delegate = self
+            productviewmodel.delegate = self
             productviewmodel.fetchData();
             
             //Calling Viewmodel class to fetchdata
@@ -71,73 +71,44 @@ class ProductListViewController: UITableViewController {
             self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+extension ProductListViewController{
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ProductCustomCell
+        let currentLastItem = productviewmodel.datalist[indexPath.row]
+        cell.updateContentOnCell(product: currentLastItem)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return productviewmodel.datalist.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func updateContentOnView(){
+        DispatchQueue.main.async{ [weak self] in
+            guard let weakSelf = self else { return }
+            // and then dismiss the control
+            weakSelf.refreshControl?.endRefreshing()
+            weakSelf.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+            weakSelf.tableView.reloadData()
+            self?.navigationItem.title = self?.productviewmodel.headerTittle
+        }
+    }
+    func updateError()
+    {
+        let alert = UIAlertController(title: secureError, message: noData , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: {[weak self] _ in
+            guard let weakSelf = self else { return }
+            weakSelf.refreshcontrol.endRefreshing()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+}

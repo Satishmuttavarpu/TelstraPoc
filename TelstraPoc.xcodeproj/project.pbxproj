@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01523EE7A0600926AE3 /* DownloadManager.swift */; };
+		4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01723EE7D6A00926AE3 /* Extension.swift */; };
 		43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF410723ED608800F092A4 /* AppDelegate.swift */; };
 		43EF410D23ED608800F092A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EF410B23ED608800F092A4 /* Main.storyboard */; };
 		43EF410F23ED608900F092A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EF410E23ED608900F092A4 /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4393C01523EE7A0600926AE3 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		4393C01723EE7D6A00926AE3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		43EF410423ED608800F092A4 /* TelstraPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EF410723ED608800F092A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43EF410C23ED608800F092A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -189,7 +193,9 @@
 		43EF413823ED60A200F092A4 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4393C01723EE7D6A00926AE3 /* Extension.swift */,
 				43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */,
+				4393C01523EE7A0600926AE3 /* DownloadManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -420,11 +426,13 @@
 				43EF416023ED86DA00F092A4 /* ProductEndPoint.swift in Sources */,
 				43EF415423ED85D200F092A4 /* EndPointType.swift in Sources */,
 				43EF415823ED860E00F092A4 /* HTTPMethod.swift in Sources */,
+				4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */,
 				43EF414D23ED6FC500F092A4 /* ProductCustomCell.swift in Sources */,
 				43EF416223ED87A100F092A4 /* Router.swift in Sources */,
 				43EF414B23ED6B0D00F092A4 /* Product.swift in Sources */,
 				43EF415223ED851D00F092A4 /* NetworkManager.swift in Sources */,
 				43EF415723ED860E00F092A4 /* HTTPTask.swift in Sources */,
+				4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */,
 				43EF415C23ED866600F092A4 /* JSONParameterEncoder.swift in Sources */,
 				43EF416423ED944900F092A4 /* ObjectMapper.swift in Sources */,
 				43EF414923ED6ABB00F092A4 /* ProductListViewModel.swift in Sources */,

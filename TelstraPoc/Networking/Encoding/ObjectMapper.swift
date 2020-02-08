@@ -1,9 +1,9 @@
 //
-//  ObjectMapper.swift
-//  TelstraSample
+//  EndPointType.swift
+//  TelstraPoc
 //
-//  Created by imgadmin on 13/08/19.
-//  Copyright © 2019 Wipro. All rights reserved.
+//  Created by Satish Muttavarapu on 07/02/20.
+//  Copyright © 2020 Satish Muttavarapu. All rights reserved.
 //
 
 import UIKit

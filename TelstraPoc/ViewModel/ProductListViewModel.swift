@@ -32,7 +32,26 @@ class ProductListViewModel: NSObject {
     func fetchData() {
         
         networkManager.getNewFacts(page: 1) { [weak self] productList , error in
+            guard let weakSelf = self else {
+                return
+            }
+            guard error == nil else {
+                print(error!)
+                self?.delegate?.updateError()
+                return
+            }
+            guard let list = productList else {
+                print("No data")
+                return
+            }
             
+            guard let tittle = list.productTittle else {
+                return
+            }
+            
+            weakSelf.headerTittle = tittle
+            weakSelf.datalist = list.productlist
+            weakSelf.delegate?.updateContentOnView()
         }
     }
 }
