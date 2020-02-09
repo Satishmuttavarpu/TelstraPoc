@@ -11,6 +11,9 @@ import XCTest
 
 class TelstraPocTests: XCTestCase {
 
+    var nm = NetworkManager()
+
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -25,7 +28,19 @@ class TelstraPocTests: XCTestCase {
     }
 
     func testPerformanceExample() {
+        let expectation = XCTestExpectation.init(description: "Your expectation")
         // This is an example of a performance test case.
+        nm.getNewFacts(page: 1) {  productList , error in
+            if error != nil{
+                XCTFail("Fail")
+            }
+            // The request is finished, so our expectation
+            expectation.fulfill()
+            
+        }
+        // We ask the unit test to wait our expectation to finish.
+        self.waitForExpectations(timeout: 20)
+        
         self.measure {
             // Put the code you want to measure the time of here.
         }

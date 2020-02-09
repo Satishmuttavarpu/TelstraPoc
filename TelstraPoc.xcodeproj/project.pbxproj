@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		437B58E623EFDD8C0074A6DE /* ProductListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */; };
 		4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01523EE7A0600926AE3 /* DownloadManager.swift */; };
 		4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01723EE7D6A00926AE3 /* Extension.swift */; };
 		43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF410723ED608800F092A4 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTest.swift; sourceTree = "<group>"; };
 		4393C01523EE7A0600926AE3 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		4393C01723EE7D6A00926AE3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		43EF410423ED608800F092A4 /* TelstraPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				43EF411C23ED608900F092A4 /* TelstraPocTests.swift */,
+				437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */,
 				43EF411E23ED608900F092A4 /* Info.plist */,
 			);
 			path = TelstraPocTests;
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				437B58E623EFDD8C0074A6DE /* ProductListViewControllerTest.swift in Sources */,
 				43EF411D23ED608900F092A4 /* TelstraPocTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
