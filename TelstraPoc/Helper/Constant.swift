@@ -18,3 +18,10 @@ let cancel : String = "Cancel"
 let placeholder : String = "placeholder"
 let cellId : String = "cellId"
 
+
+let authenticationError: String = "You need to be authenticated first."
+let badRequest: String = "Bad request"
+let outdated: String = "The url you requested is outdated."
+let failed: String = "Network request failed."
+let noResposeData: String = "Response returned with no data to decode."
+let unableToDecode: String = "We could not decode the response."

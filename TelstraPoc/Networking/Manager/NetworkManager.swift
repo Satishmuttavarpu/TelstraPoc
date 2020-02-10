@@ -10,12 +10,12 @@ import Foundation
 
 enum NetworkResponse:String {
     case success
-    case authenticationError = "You need to be authenticated first."
-    case badRequest = "Bad request"
-    case outdated = "The url you requested is outdated."
-    case failed = "Network request failed."
-    case noData = "Response returned with no data to decode."
-    case unableToDecode = "We could not decode the response."
+    case authenticationError
+    case badRequest
+    case outdated
+    case failed
+    case noResposeData
+    case unableToDecode
 }
 
 enum Result<String>{
@@ -41,7 +41,7 @@ struct NetworkManager {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(nil, NetworkResponse.noData.rawValue)
+                        completion(nil, NetworkResponse.noResposeData.rawValue)
                         return
                     }
                     if let dict = self.convertToDictionary(text: String(decoding: responseData, as: UTF8.self)){
