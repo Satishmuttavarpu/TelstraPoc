@@ -11,7 +11,7 @@ import XCTest
 
 class ProductListViewControllerTest: XCTestCase {
 
-    var viewControllerUnderTest : ProductListViewController!
+    var vcTest : ProductListViewController!
     var vc = UINavigationController()
     
     override func setUp() {
@@ -21,7 +21,7 @@ class ProductListViewControllerTest: XCTestCase {
             //            viewControllerUnderTest = window.rootViewController  as! ProductListViewController
             //            viewControllerUnderTest.loadView()
             vc = window.rootViewController as! UINavigationController
-            viewControllerUnderTest = self.vc.viewControllers[0] as? ProductListViewController
+            vcTest = self.vc.viewControllers[0] as? ProductListViewController
             
         }
         
@@ -34,32 +34,31 @@ class ProductListViewControllerTest: XCTestCase {
     }
     
     func testHasATableView() {
-        XCTAssertNotNil(viewControllerUnderTest)
+        XCTAssertNotNil(vcTest)
     }
     
     func testTableViewHasDelegate() {
-        XCTAssertNotNil(viewControllerUnderTest.tableView.delegate)
+        XCTAssertNotNil(vcTest.tableView.delegate)
     }
     
     func testTableViewConfromsToTableViewDelegateProtocol() {
-        XCTAssertTrue(viewControllerUnderTest.conforms(to: UITableViewDelegate.self))
+        XCTAssertTrue(vcTest.conforms(to: UITableViewDelegate.self))
         // XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.tableView(_:didSelectRowAt:))))
     }
     
     func testTableViewHasDataSource() {
-        XCTAssertNotNil(viewControllerUnderTest.tableView.dataSource)
+        XCTAssertNotNil(vcTest.tableView.dataSource)
     }
     
     func testTableViewConformsToTableViewDataSourceProtocol() {
-        XCTAssertTrue(viewControllerUnderTest.conforms(to: UITableViewDataSource.self))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.numberOfSections(in:))))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.tableView(_:numberOfRowsInSection:))))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.tableView(_:cellForRowAt:))))
+        XCTAssertTrue(vcTest.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(vcTest.responds(to: #selector(vcTest.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(vcTest.responds(to: #selector(vcTest.tableView(_:cellForRowAt:))))
     }
     
     func testTableViewHastitle()
     {
-        let actualTitle = viewControllerUnderTest.navigationItem.title
+        let actualTitle = vcTest.navigationItem.title
         let expectedTitle = "About Canada"
         XCTAssertEqual(actualTitle, expectedTitle)
     }
