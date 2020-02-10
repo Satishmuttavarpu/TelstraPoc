@@ -15,4 +15,6 @@ let pullToRefresh : String = "PullToRefresh"
 let internetConnection : String = "Internet Connection"
 let noInternetAvailable : String = "No Internet aviliable"
 let cancel : String = "Cancel"
+let placeholder : String = "placeholder"
+let cellId : String = "cellId"
 

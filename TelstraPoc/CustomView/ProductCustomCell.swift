@@ -68,12 +68,12 @@ class ProductCustomCell: UITableViewCell {
                     if let image = image {
                         weakSelf.productImage.image = image
                     } else {
-                        weakSelf.productImage.image = UIImage(named: "placeholder")
+                        weakSelf.productImage.image = UIImage(named: placeholder)
                     }
                 }
             })
         }else{
-            self.productImage.image = UIImage(named: "placeholder")
+            self.productImage.image = UIImage(named: placeholder)
         }
         
         if let desc = productDetails.productDesc{

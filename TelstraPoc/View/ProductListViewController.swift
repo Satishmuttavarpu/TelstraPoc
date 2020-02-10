@@ -19,12 +19,9 @@ class ProductListViewController: UITableViewController,NotificationProtocal {
     }()
     
     var productviewmodel = ProductListViewModel()
-    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = "About Canada"
         // Add Refresh Control to Table View
         if #available(iOS 10.0, *) {
             tableView.refreshControl = refreshcontrol

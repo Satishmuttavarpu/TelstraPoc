@@ -50,10 +50,17 @@ struct NetworkManager {
                             completion(ObjectMapper.objectmapper.productList , nil)
                         }
                     }else{
-                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                        DispatchQueue.main.async{
+                            completion(nil, NetworkResponse.unableToDecode.rawValue)
+                        }
+                        
                     }
                 case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
+                    
+                    DispatchQueue.main.async{
+                        completion(nil, networkFailureError)
+                    }
+                    
                 }
             }
         }

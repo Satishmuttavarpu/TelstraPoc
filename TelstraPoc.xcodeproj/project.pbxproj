@@ -11,7 +11,6 @@
 		4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01523EE7A0600926AE3 /* DownloadManager.swift */; };
 		4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01723EE7D6A00926AE3 /* Extension.swift */; };
 		43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF410723ED608800F092A4 /* AppDelegate.swift */; };
-		43EF410D23ED608800F092A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EF410B23ED608800F092A4 /* Main.storyboard */; };
 		43EF410F23ED608900F092A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EF410E23ED608900F092A4 /* Assets.xcassets */; };
 		43EF411223ED608900F092A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EF411023ED608900F092A4 /* LaunchScreen.storyboard */; };
 		43EF411D23ED608900F092A4 /* TelstraPocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF411C23ED608900F092A4 /* TelstraPocTests.swift */; };
@@ -32,6 +31,7 @@
 		43EF416023ED86DA00F092A4 /* ProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF415F23ED86DA00F092A4 /* ProductEndPoint.swift */; };
 		43EF416223ED87A100F092A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF416123ED87A100F092A4 /* Router.swift */; };
 		43EF416423ED944900F092A4 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF416323ED944900F092A4 /* ObjectMapper.swift */; };
+		43FA23AD23F13D49008D8809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FA23AC23F13D49008D8809 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		4393C01723EE7D6A00926AE3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		43EF410423ED608800F092A4 /* TelstraPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EF410723ED608800F092A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43EF410C23ED608800F092A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43EF410E23ED608900F092A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43EF411123ED608900F092A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43EF411323ED608900F092A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		43EF415F23ED86DA00F092A4 /* ProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndPoint.swift; sourceTree = "<group>"; };
 		43EF416123ED87A100F092A4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		43EF416323ED944900F092A4 /* ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
+		43FA23AC23F13D49008D8809 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,14 +137,13 @@
 				43EF413623ED609E00F092A4 /* Model */,
 				43EF413C23ED60E200F092A4 /* View */,
 				43EF413723ED60A000F092A4 /* ViewModel */,
-				43EF413D23ED60ED00F092A4 /* Service */,
 				43EF413B23ED60D900F092A4 /* Helper */,
 				43EF413A23ED60C600F092A4 /* Asset */,
 				43EF413923ED60BF00F092A4 /* Networking */,
 				43EF413823ED60A200F092A4 /* Utility */,
 				43EF413523ED609900F092A4 /* Application */,
-				43EF410B23ED608800F092A4 /* Main.storyboard */,
 				43EF411323ED608900F092A4 /* Info.plist */,
+				43FA23AC23F13D49008D8809 /* Main.storyboard */,
 			);
 			path = TelstraPoc;
 			sourceTree = "<group>";
@@ -236,13 +235,6 @@
 				43EF414023ED663000F092A4 /* ProductListViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		43EF413D23ED60ED00F092A4 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		43EF413F23ED615700F092A4 /* CustomView */ = {
@@ -395,9 +387,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FA23AD23F13D49008D8809 /* Main.storyboard in Resources */,
 				43EF411223ED608900F092A4 /* LaunchScreen.storyboard in Resources */,
 				43EF410F23ED608900F092A4 /* Assets.xcassets in Resources */,
-				43EF410D23ED608800F092A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,14 +469,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		43EF410B23ED608800F092A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43EF410C23ED608800F092A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		43EF411023ED608900F092A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

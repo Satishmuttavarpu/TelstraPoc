@@ -31,12 +31,17 @@ class ProductListViewModel: NSObject {
     func fetchData() {
         
         networkManager.getNewFacts(page: 1) { [weak self] productList , error in
+            
+            
             guard let weakSelf = self else {
                 return
             }
             guard error == nil else {
                 print(error!)
-                self?.delegate?.updateError()
+                DispatchQueue.main.async{
+                    self?.delegate?.updateError()
+                }
+                
                 return
             }
             guard let list = productList else {
