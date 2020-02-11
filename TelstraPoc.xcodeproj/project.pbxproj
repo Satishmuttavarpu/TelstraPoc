@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4347561E23F26AAA000791D5 /* LocalDataForTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4347561D23F26AAA000791D5 /* LocalDataForTest.json */; };
-		437B58E623EFDD8C0074A6DE /* ProductListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */; };
+		436C0EE823F29F5B0050FBBA /* FactsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C0EE723F29F5B0050FBBA /* FactsListViewController.swift */; };
+		436C0EEA23F29F950050FBBA /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C0EE923F29F950050FBBA /* FactsListViewModel.swift */; };
+		436C0EEC23F2A0AE0050FBBA /* FactsCustumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C0EEB23F2A0AE0050FBBA /* FactsCustumCell.swift */; };
+		436C0EEE23F2A2F20050FBBA /* FactsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C0EED23F2A2F10050FBBA /* FactsListViewControllerTest.swift */; };
 		4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01523EE7A0600926AE3 /* DownloadManager.swift */; };
 		4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01723EE7D6A00926AE3 /* Extension.swift */; };
 		43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF410723ED608800F092A4 /* AppDelegate.swift */; };
@@ -16,11 +19,8 @@
 		43EF411223ED608900F092A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EF411023ED608900F092A4 /* LaunchScreen.storyboard */; };
 		43EF411D23ED608900F092A4 /* TelstraPocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF411C23ED608900F092A4 /* TelstraPocTests.swift */; };
 		43EF412823ED608900F092A4 /* TelstraPocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF412723ED608900F092A4 /* TelstraPocUITests.swift */; };
-		43EF414123ED663000F092A4 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414023ED663000F092A4 /* ProductListViewController.swift */; };
 		43EF414723ED6A7400F092A4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414623ED6A7400F092A4 /* Constant.swift */; };
-		43EF414923ED6ABB00F092A4 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */; };
-		43EF414B23ED6B0D00F092A4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414A23ED6B0D00F092A4 /* Product.swift */; };
-		43EF414D23ED6FC500F092A4 /* ProductCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */; };
+		43EF414B23ED6B0D00F092A4 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414A23ED6B0D00F092A4 /* Fact.swift */; };
 		43EF414F23ED70ED00F092A4 /* ReachabilityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */; };
 		43EF415223ED851D00F092A4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF415123ED851D00F092A4 /* NetworkManager.swift */; };
 		43EF415423ED85D200F092A4 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF415323ED85D200F092A4 /* EndPointType.swift */; };
@@ -53,7 +53,10 @@
 
 /* Begin PBXFileReference section */
 		4347561D23F26AAA000791D5 /* LocalDataForTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LocalDataForTest.json; path = ../../LocalDataForTest.json; sourceTree = "<group>"; };
-		437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTest.swift; sourceTree = "<group>"; };
+		436C0EE723F29F5B0050FBBA /* FactsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewController.swift; sourceTree = "<group>"; };
+		436C0EE923F29F950050FBBA /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		436C0EEB23F2A0AE0050FBBA /* FactsCustumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsCustumCell.swift; sourceTree = "<group>"; };
+		436C0EED23F2A2F10050FBBA /* FactsListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewControllerTest.swift; sourceTree = "<group>"; };
 		4393C01523EE7A0600926AE3 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		4393C01723EE7D6A00926AE3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		43EF410423ED608800F092A4 /* TelstraPoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraPoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,11 +70,8 @@
 		43EF412323ED608900F092A4 /* TelstraPocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstraPocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EF412723ED608900F092A4 /* TelstraPocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraPocUITests.swift; sourceTree = "<group>"; };
 		43EF412923ED608900F092A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43EF414023ED663000F092A4 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		43EF414623ED6A7400F092A4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
-		43EF414A23ED6B0D00F092A4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCustomCell.swift; sourceTree = "<group>"; };
+		43EF414A23ED6B0D00F092A4 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		43EF414E23ED70ED00F092A4 /* ReachabilityTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityTest.swift; sourceTree = "<group>"; };
 		43EF415123ED851D00F092A4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		43EF415323ED85D200F092A4 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				43EF411C23ED608900F092A4 /* TelstraPocTests.swift */,
-				437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */,
+				436C0EED23F2A2F10050FBBA /* FactsListViewControllerTest.swift */,
 				4347561D23F26AAA000791D5 /* LocalDataForTest.json */,
 				43EF411E23ED608900F092A4 /* Info.plist */,
 			);
@@ -179,7 +179,7 @@
 		43EF413623ED609E00F092A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				43EF414A23ED6B0D00F092A4 /* Product.swift */,
+				43EF414A23ED6B0D00F092A4 /* Fact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 		43EF413723ED60A000F092A4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				43EF414823ED6ABB00F092A4 /* ProductListViewModel.swift */,
+				436C0EE923F29F950050FBBA /* FactsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 		43EF413C23ED60E200F092A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				43EF414023ED663000F092A4 /* ProductListViewController.swift */,
+				436C0EE723F29F5B0050FBBA /* FactsListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 		43EF413F23ED615700F092A4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				43EF414C23ED6FC500F092A4 /* ProductCustomCell.swift */,
+				436C0EEB23F2A0AE0050FBBA /* FactsCustumCell.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -415,22 +415,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EF415E23ED866600F092A4 /* ParameterEncoding.swift in Sources */,
-				43EF414123ED663000F092A4 /* ProductListViewController.swift in Sources */,
 				43EF410823ED608800F092A4 /* AppDelegate.swift in Sources */,
+				436C0EEA23F29F950050FBBA /* FactsListViewModel.swift in Sources */,
 				43EF415D23ED866600F092A4 /* URLParameterEncoding.swift in Sources */,
 				43EF416023ED86DA00F092A4 /* ProductEndPoint.swift in Sources */,
 				43EF415423ED85D200F092A4 /* EndPointType.swift in Sources */,
+				436C0EEC23F2A0AE0050FBBA /* FactsCustumCell.swift in Sources */,
 				43EF415823ED860E00F092A4 /* HTTPMethod.swift in Sources */,
 				4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */,
-				43EF414D23ED6FC500F092A4 /* ProductCustomCell.swift in Sources */,
+				436C0EE823F29F5B0050FBBA /* FactsListViewController.swift in Sources */,
 				43EF416223ED87A100F092A4 /* Router.swift in Sources */,
-				43EF414B23ED6B0D00F092A4 /* Product.swift in Sources */,
+				43EF414B23ED6B0D00F092A4 /* Fact.swift in Sources */,
 				43EF415223ED851D00F092A4 /* NetworkManager.swift in Sources */,
 				43EF415723ED860E00F092A4 /* HTTPTask.swift in Sources */,
 				4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */,
 				43EF415C23ED866600F092A4 /* JSONParameterEncoder.swift in Sources */,
 				43EF416423ED944900F092A4 /* ObjectMapper.swift in Sources */,
-				43EF414923ED6ABB00F092A4 /* ProductListViewModel.swift in Sources */,
 				43EF414723ED6A7400F092A4 /* Constant.swift in Sources */,
 				43EF414F23ED70ED00F092A4 /* ReachabilityTest.swift in Sources */,
 			);
@@ -440,7 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				437B58E623EFDD8C0074A6DE /* ProductListViewControllerTest.swift in Sources */,
+				436C0EEE23F2A2F20050FBBA /* FactsListViewControllerTest.swift in Sources */,
 				43EF411D23ED608900F092A4 /* TelstraPocTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

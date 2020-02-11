@@ -1,8 +1,8 @@
 //
-//  ProductListViewModel.swift
+//  FactsListViewModel.swift
 //  TelstraPoc
 //
-//  Created by Satish Muttavarapu on 07/02/20.
+//  Created by Satish Muttavarapu on 11/02/20.
 //  Copyright © 2020 Satish Muttavarapu. All rights reserved.
 //
 
@@ -14,13 +14,11 @@ protocol NotificationProtocal {
     func updateError()
 }
 
-
-class ProductListViewModel: NSObject {
+class FactsListViewModel: NSObject {
     
     let networkManager = NetworkManager()
-    
     var delegate : NotificationProtocal?
-    var datalist = [Product]()
+    var datalist = [Fact]()
     var headerTittle:String?
     
     override init() {
@@ -31,8 +29,6 @@ class ProductListViewModel: NSObject {
     func fetchData() {
         
         networkManager.getNewFacts(page: 1) { [weak self] productList , error in
-            
-            
             guard let weakSelf = self else {
                 return
             }
@@ -48,12 +44,12 @@ class ProductListViewModel: NSObject {
                 return
             }
             
-            guard let tittle = list.productTittle else {
+            guard let tittle = list.factTittle else {
                 return
             }
             
             weakSelf.headerTittle = tittle
-            weakSelf.datalist = list.productlist
+            weakSelf.datalist = list.factslist
             weakSelf.delegate?.updateContentOnView()
         }
     }

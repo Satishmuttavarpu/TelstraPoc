@@ -28,7 +28,7 @@ struct NetworkManager {
     static let productAPIKey = ""
     let router = Router<ProductApi>()
     
-    func getNewFacts(page: Int, completion: @escaping (_ movie: ProductList?,_ error: String?)->()){
+    func getNewFacts(page: Int, completion: @escaping (_ movie: FactsList?,_ error: String?)->()){
         
         router.request(.newFacts(page: page)) { data, response, error in
             
@@ -47,7 +47,7 @@ struct NetworkManager {
                     if let dict = self.convertToDictionary(text: String(decoding: responseData, as: UTF8.self)){
                         ObjectMapper.objectmapper.map(dict: dict)
                         DispatchQueue.main.async{
-                            completion(ObjectMapper.objectmapper.productList , nil)
+                            completion(ObjectMapper.objectmapper.factsList , nil)
                         }
                     }else{
                         DispatchQueue.main.async{

@@ -14,9 +14,9 @@ class ObjectMapper : NSObject{
     
     static public let objectmapper = ObjectMapper()
     
-    var productList:ProductList?
+    var factsList:FactsList?
 
-    private var datalist = [Product]()
+    private var datalist = [Fact]()
     
     public override init() {
         
@@ -42,9 +42,9 @@ class ObjectMapper : NSObject{
         //print("Total Products:\(jsonArray)")
         for json in jsonArray
         {
-            datalist.append(Product(productName: json["title"] as? String ?? "No value", productImage: json["imageHref"] as? String ?? "" , productDesc: json["description"] as? String ?? "No Value"))
+            datalist.append(Fact(factName: json["title"] as? String ?? "No value", factImage: json["imageHref"] as? String ?? "", factDesc: json["description"] as? String ?? "No Value"))
         }
-        productList = ProductList(with: tittle, datalist)
+        factsList = FactsList(with: tittle, datalist)
     }
 }
 

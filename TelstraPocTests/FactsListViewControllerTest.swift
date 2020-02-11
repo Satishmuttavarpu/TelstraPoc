@@ -1,31 +1,26 @@
 //
-//  ProductListViewControllerTest.swift
+//  FactsListViewControllerTest.swift
 //  TelstraPocTests
 //
-//  Created by Satish Muttavarapu on 09/02/20.
+//  Created by Satish Muttavarapu on 11/02/20.
 //  Copyright © 2020 Satish Muttavarapu. All rights reserved.
 //
 
 import XCTest
 @testable import TelstraPoc
 
-class ProductListViewControllerTest: XCTestCase {
+class FactsListViewControllerTest: XCTestCase {
 
-    var vcTest : ProductListViewController!
+   var vcTest : FactsListViewController!
     var vc = UINavigationController()
     
     override func setUp() {
         super.setUp()
         
         if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
-            //            viewControllerUnderTest = window.rootViewController  as! ProductListViewController
-            //            viewControllerUnderTest.loadView()
             vc = window.rootViewController as! UINavigationController
-            vcTest = self.vc.viewControllers[0] as? ProductListViewController
-            
+            vcTest = self.vc.viewControllers[0] as? FactsListViewController
         }
-        
-        
     }
     
     override func tearDown() {
@@ -55,11 +50,5 @@ class ProductListViewControllerTest: XCTestCase {
         XCTAssertTrue(vcTest.responds(to: #selector(vcTest.tableView(_:numberOfRowsInSection:))))
         XCTAssertTrue(vcTest.responds(to: #selector(vcTest.tableView(_:cellForRowAt:))))
     }
-    
-    func testTableViewHastitle()
-    {
-       // let actualTitle = vcTest.navigationItem.title
-       // let expectedTitle = "About Canada"
-       // XCTAssertEqual(actualTitle, expectedTitle)
-    }
+
 }
