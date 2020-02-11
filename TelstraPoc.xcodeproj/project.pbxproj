@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4347561E23F26AAA000791D5 /* LocalDataForTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4347561D23F26AAA000791D5 /* LocalDataForTest.json */; };
 		437B58E623EFDD8C0074A6DE /* ProductListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */; };
 		4393C01623EE7A0600926AE3 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01523EE7A0600926AE3 /* DownloadManager.swift */; };
 		4393C01823EE7D6A00926AE3 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4393C01723EE7D6A00926AE3 /* Extension.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4347561D23F26AAA000791D5 /* LocalDataForTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LocalDataForTest.json; path = ../../LocalDataForTest.json; sourceTree = "<group>"; };
 		437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTest.swift; sourceTree = "<group>"; };
 		4393C01523EE7A0600926AE3 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		4393C01723EE7D6A00926AE3 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				43EF411C23ED608900F092A4 /* TelstraPocTests.swift */,
 				437B58E523EFDD8C0074A6DE /* ProductListViewControllerTest.swift */,
+				4347561D23F26AAA000791D5 /* LocalDataForTest.json */,
 				43EF411E23ED608900F092A4 /* Info.plist */,
 			);
 			path = TelstraPocTests;
@@ -393,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4347561E23F26AAA000791D5 /* LocalDataForTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
