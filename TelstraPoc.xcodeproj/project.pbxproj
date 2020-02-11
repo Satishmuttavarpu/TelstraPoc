@@ -31,7 +31,6 @@
 		43EF416023ED86DA00F092A4 /* ProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF415F23ED86DA00F092A4 /* ProductEndPoint.swift */; };
 		43EF416223ED87A100F092A4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF416123ED87A100F092A4 /* Router.swift */; };
 		43EF416423ED944900F092A4 /* ObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF416323ED944900F092A4 /* ObjectMapper.swift */; };
-		43FA23AD23F13D49008D8809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43FA23AC23F13D49008D8809 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +81,6 @@
 		43EF415F23ED86DA00F092A4 /* ProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndPoint.swift; sourceTree = "<group>"; };
 		43EF416123ED87A100F092A4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		43EF416323ED944900F092A4 /* ObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMapper.swift; sourceTree = "<group>"; };
-		43FA23AC23F13D49008D8809 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +141,6 @@
 				43EF413823ED60A200F092A4 /* Utility */,
 				43EF413523ED609900F092A4 /* Application */,
 				43EF411323ED608900F092A4 /* Info.plist */,
-				43FA23AC23F13D49008D8809 /* Main.storyboard */,
 			);
 			path = TelstraPoc;
 			sourceTree = "<group>";
@@ -387,7 +384,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43FA23AD23F13D49008D8809 /* Main.storyboard in Resources */,
 				43EF411223ED608900F092A4 /* LaunchScreen.storyboard in Resources */,
 				43EF410F23ED608900F092A4 /* Assets.xcassets in Resources */,
 			);
